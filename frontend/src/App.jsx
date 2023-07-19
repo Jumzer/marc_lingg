@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import Categories from "@pages/Categories";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Page404 from "./pages/Page404";
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<UserLayout />}>
             <Route path="" element={<Home />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="categories" element={<Categories />} />
             <Route path="*" element={<Page404 />} />
           </Route>
           <Route path="/admin" element={<AdminLayout />}>
