@@ -12,16 +12,18 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<UserLayout />}>
-          <Route path="" element={<Home />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<Page404 />} />
-        </Route>
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route path="" element={<HomeAdmin />} />
-        </Route>
-      </Routes>
+      <div className="text-white">
+        <Routes>
+          <Route path="/" element={<UserLayout />}>
+            <Route path="" element={<Home />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<Page404 />} />
+          </Route>
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="" element={<HomeAdmin />} />
+          </Route>
+        </Routes>
+      </div>
     </Router>
   );
 }
