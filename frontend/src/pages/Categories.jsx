@@ -5,7 +5,7 @@ function Categories() {
   return (
     <div>
       <Header />
-      <div></div>;
+      <div />
     </div>
   );
 }
