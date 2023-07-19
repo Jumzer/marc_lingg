@@ -29,6 +29,11 @@ pool.getConnection().catch(() => {
 
 const models = {};
 
+const CategoryManager = require("./CategoryManager");
+
+models.category = new CategoryManager();
+models.category.setDatabase(pool);
+
 const ItemManager = require("./ItemManager");
 
 models.item = new ItemManager();
