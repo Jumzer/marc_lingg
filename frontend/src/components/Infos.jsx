@@ -9,7 +9,7 @@ function Infos() {
         <h3>06 05 04 03 02</h3>
         <h3>Instagram</h3>
       </div>
-      <div className="basis-1/2"></div>
+      <div className="basis-1/2" />
     </div>
   );
 }
