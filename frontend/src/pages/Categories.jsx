@@ -26,7 +26,7 @@ function Categories() {
           <div className="basis-1/3" key={category.id}>
             <div>
               <img
-                className="h-40 w-full"
+                className="object-cover w-96 h-40"
                 src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${
                   category.img_src
                 }`}
