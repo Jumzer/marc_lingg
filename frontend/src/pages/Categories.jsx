@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Header from "@components/Header";
-import connexion from "@services/connexion";
+import connexion from "../services/connexion";
 
 function Categories() {
   const [categories, setCategories] = useState([]);
 
   const getCategories = async () => {
     try {
-      const categoriesz = await connexion.get(`/categories`);
-      setCategories(categoriesz);
+      const allCategory = await connexion.get(`/categories`);
+      setCategories(allCategory);
     } catch (error) {
       console.error(error);
     }
@@ -19,12 +19,25 @@ function Categories() {
   }, []);
 
   return (
-    <div>
-      {categories.map((category) => (
-        <div>{category.name}</div>
-      ))}
+    <div className="h-screen flex flex-col">
       <Header />
-      <div />
+      <div className="flex flex-col flex-1">
+        {categories.map((category) => (
+          <div className="basis-1/3" key={category.id}>
+            <div>
+              <img
+                className="h-40 w-full"
+                src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${
+                  category.img_src
+                }`}
+                alt={category.img_alt}
+              />
+            </div>
+            {category.name}
+          </div>
+        ))}
+        <div />
+      </div>
     </div>
   );
 }
