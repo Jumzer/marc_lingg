@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@200;400;600&display=swap");
+@layer base {
+  @font-face {
+    font-family: "BoldTalouFont";
+    src: url("./fonts/bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "LightTalouFont";
+    src: url("./fonts/light.ttf") format("truetype");
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-heading;
+  }
+}
 
 @tailwind base;
 @tailwind components;
